@@ -1,0 +1,40 @@
+<html>
+ <head>
+   <title>css</title>
+   <style>
+       *{
+	   text-align:center;
+	   color:blue;
+	   text-decoration:overline;
+	   }
+	 h1,h2{
+	     text-align:center;
+	     color:blue;
+		 font-size:59;
+		 text-decoration:overline underline;
+		 letter-spacing:8px;
+	   }
+	#p{
+       text-align:center;
+       color:midnightblue;
+	   font-size:50px;
+	   word-spacing:5px;
+	   text-transform:capitalize;
+	   border-style:outset groove solid double;
+	   border-bottom-color:silver;
+	   border-left-color:gray;
+	   border-right-color:Gray;
+	   border-top-color:silver;
+      }
+	  .class{
+		  text-align:center;
+       color:red;
+	   font-size:50px;
+	   text-shadow:30px 8px DarkSlateGray;
+	   border:10px solid red;
+	   padding:20px;
+	   margin:auto;
+	  }
+   </style>
+   </head>
+</html>

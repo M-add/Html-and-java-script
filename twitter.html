@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentiment Analysis</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    function performSentimentAnalysis() {
+      // tweet input
+      var tweetInput = document.getElementById('tweet-input').value;
+
+      // Preprocess tweet
+      var tweetWords = [];
+      var words = tweetInput.split(' ');
+      for (var i = 0; i < words.length; i++) {
+        var word = words[i];
+        if (word.startsWith('@') && word.length > 1) {
+          word = '@user';
+        } else if (word.startsWith('http')) {
+          word = 'http';
+        }
+        tweetWords.push(word);
+      }
+      var processedTweet = tweetWords.join(' ');
+
+      // Send request to perform sentiment analysis
+      var url = 'YOUR_BACKEND_API_URL';
+      var data = { tweet: processedTweet };
+      axios.post(url, data)
+        .then(function(response) {
+          var results = response.data.results;
+          var output = document.getElementById('output');
+          output.innerHTML = '';
+          for (var i = 0; i < results.length; i++) {
+            var label = results[i].label;
+            var score = results[i].score;
+            var resultItem = document.createElement('p');
+            resultItem.innerHTML = label + ': ' + score;
+            output.appendChild(resultItem);
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+  </script>
+</head>
+<body>
+  <h1>Sentiment Analysis</h1>
+  <input type="text" id="tweet-input" placeholder="Enter a tweet" />
+  <button onclick="performSentimentAnalysis()">Analyze</button>
+  <div id="output"></div>
+</body>
+</html>

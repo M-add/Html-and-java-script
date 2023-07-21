@@ -1,0 +1,14 @@
+<html>
+   <head>
+    <title>DOM</title>
+   </head>
+   <body>
+       <h2>welcome</h2>
+	   <p id="intro">Welcome</p>
+	   <p id="demo">name dob</p>
+	   <script>
+	     var element1=document.getElementById("intro");
+		 document.getElementById("demo").innerHTML="text ftom the intro paragraph"+" "+element1.innerHTML;
+		 </script>
+   </body>
+</html>

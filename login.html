@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration form</title>
+    <script src="login.js"></script>
+</head>
+<style>
+    span {
+        display: inline-block;
+        margin-right: 200px;
+    }
+
+    div {
+        margin-left: 100px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        background-color: red;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <span>
+        <h1>LOGIN</h1>
+        Email:<br> <input id="em" type="email" name="email"><br>
+        Password:<br> <input type="password" name="password"><br>
+        <button type="submit" onclick="login()">Login</button><br>
+        <span id="below2"></span>
+    </span>
+    <span>
+        <h2>REGISTER</h2>
+        Fname: <input type="text" id="first" name="fname" maxlength="20"><br>
+        <span style="color:red" id="below"></span><br>
+        Lname: <input type="text" id="second" name="lname"><br>
+        <span style="color:red" id="below1"></span><br>
+        Email: <input id="em1" type="email" name="email"><br><br>
+        Password: <input type="password" name="password"><br><br>
+        Gender :<input type="radio" value="male" name="gender">male <input type="radio" value="female"
+                name="gender">female<br><br>
+        <input type="checkbox" name="language1" value="Tamil">Tamil
+        <input type="checkbox" name="language2" value="English">English<br><br>
+        <button type="submit" onclick="reg()">Sign-Up</button><br>
+
+
+</body>
+</html>

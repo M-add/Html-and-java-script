@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Passing an Array to the function</title>
+<script type="text/javascript"> 
+function display(a)
+{ 
+   document.write("The contents of the array are..."+"<br/>");
+   var i=0;
+   for(i in a)
+   {
+     document.write(a[i]+"<br/>"); 
+	 i++;
+   }
+}
+</script>
+</head>
+ <body>
+ <center>
+   <script type="text/javascript"> 
+    var ar=new Array(10); 
+    for(i=1;i<=10;i++)
+    {
+      ar[i]=i;
+    }
+   display(ar); 
+   </script>
+  </center>
+ </body>
+</html>
+
